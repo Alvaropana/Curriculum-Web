@@ -1,0 +1,106 @@
+{
+    "persona": {
+        "nombre": "Álvaro Peña Gil",
+        "saludo": "Hola soy Álvaro Peña Gil",
+        "descripcion": "Soy un desarrollador con perfil creativo y pasión por las tecnologías de la información. Técnico Superior en DAM y actualmente perfeccionando mi formación en DAW. Me caracterizo por mi actitud positiva, facilidad para trabajar en equipo y orientación a la resolución creativa de problemas.",
+        "foto": "/foto perfil.png",
+        "logo": "/logo nombre.png"
+    },
+    "navegacion": [
+        { "id": "sobre-mi", "texto": "Sobre mi" },
+        { "id": "formacion", "texto": "Formación" },
+        { "id": "experiencia", "texto": "Experiencia Laboral" },
+        { "id": "proyecto", "texto": "Proyecto" },
+        { "id": "contacto", "texto": "Contacto" }
+    ],
+    "formacion": [
+        {
+            "id": 1,
+            "titulo": "Ciclo superior de Desarrollo de Aplicaciones Web",
+            "fecha": "Cursando / Finalizando en el 2027",
+            "imagen": "/image vedruna.png",
+            "centro": "Fundación Vedruna Educación"
+        },
+        {
+            "id": 2,
+            "titulo": "Ciclo superior de desarrollo de aplicaciones multiplataforma",
+            "fecha": "Finalizado en el 2026",
+            "imagen": "/image vedruna.png",
+            "centro": "Fundación Vedruna Educación"
+        },
+        {
+            "id": 3,
+            "titulo": "Técnico de sistema SMR (Técnico de sistema microinformático y redes)",
+            "fecha": "Finalizado en el 2024",
+            "imagen": "/image monroy.png",
+            "centro": "IES Cristóbal de Monroy"
+        }
+    ],
+    "experiencia": [
+        {
+            "id": 1,
+            "puesto": "Técnico informático",
+            "fecha": "Marzo - junio del 2024",
+            "descripcion": "En las prácticas fui a un instituto como técnico informático encargado del mantenimiento y reparación de proyectores y ordenadores."
+        },
+        {
+            "id": 2,
+            "puesto": "Programador de una app",
+            "fecha": "Marzo - junio del 2026",
+            "descripcion": "En las prácticas del grado superior de DAM hice una aplicación de gestión de biblioteca."
+        },
+        {
+            "id": 3,
+            "puesto": "Probador de juegos",
+            "fecha": "Marzo - junio del 2025",
+            "descripcion": "Fui probador de juegos para PS4 para ver si tenían problemas."
+        },
+        {
+            "id": 4,
+            "puesto": "Repartidor de paquetes",
+            "fecha": "Marzo - junio del 2023",
+            "descripcion": "Estuve trabajando como repartidor de paquetes en mi ciudad."
+        }
+    ],
+    "proyectos": [
+        {
+            "id": 1,
+            "titulo": "Aplicación de gestión del stock",
+            "descripcion": "Estoy desarrollando una aplicación para gestionar el stock de reactivos almacenables en la nevera del laboratorio de Microbiología Clínica del Hospital.",
+            "icono": "/icono de base de datos.png",
+            "imagen": "/menu.png"
+        },
+        {
+            "id": 2,
+            "titulo": "Juego de cazar dragones por la calle",
+            "descripcion": "Estoy creando un juego de cazar dragones por la calle como el Pokémon Go.",
+            "icono": "/icono de base de datos.png",
+            "imagen": "/menu.png"
+        }
+    ],
+    "contacto": [
+        {
+            "id": 1,
+            "tipo": "correo",
+            "texto": "alvaropg122005@gmail.com",
+            "icono": "/image gmail.png"
+        },
+        {
+            "id": 2,
+            "tipo": "telefono",
+            "texto": "+34 640 82 62 31",
+            "icono": "/imagen telefono.png"
+        },
+        {
+            "id": 3,
+            "tipo": "ubicacion",
+            "texto": "Calle Espiga nº23, Alcalá de Guadaíra",
+            "icono": "/imagen direccion.png"
+        },
+        {
+            "id": 4,
+            "tipo": "linkedin",
+            "icono": "/image linkedin.png"
+        }
+    ]
+}
