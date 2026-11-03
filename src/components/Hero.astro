@@ -1,0 +1,62 @@
+---
+interface Props {
+    persona: {
+        saludo: string;
+        descripcion: string;
+        foto: string;
+        nombre: string;
+    };
+}
+
+const { persona } = Astro.props;
+---
+
+<section id="sobre-mi" class="hero">
+    <div class="texto">
+        <h1>{persona.saludo}</h1>
+        <p>{persona.descripcion}</p>
+    </div>
+    <img src={persona.foto} alt={`Foto de ${persona.nombre}`} />
+</section>
+
+<style>
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr minmax(200px, 300px);
+        align-items: center;
+        gap: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 3rem;
+    }
+    h1 {
+        margin: 0 0 1.5rem;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    p {
+        margin: 0;
+        max-width: 42ch;
+        font-size: 1.35rem;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: var(--sombra);
+    }
+
+    @media (max-width: 700px) {
+        .hero {
+            grid-template-columns: 1fr;
+            padding-top: 2.5rem;
+        }
+        img {
+            order: -1;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+    }
+</style>

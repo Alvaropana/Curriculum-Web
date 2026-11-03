@@ -3,7 +3,7 @@
         "nombre": "Álvaro Peña Gil",
         "saludo": "Hola soy Álvaro Peña Gil",
         "descripcion": "Soy un desarrollador con perfil creativo y pasión por las tecnologías de la información. Técnico Superior en DAM y actualmente perfeccionando mi formación en DAW. Me caracterizo por mi actitud positiva, facilidad para trabajar en equipo y orientación a la resolución creativa de problemas.",
-        "foto": "/foto perfil.png",
+        "foto": "/foto perfil.jpg",
         "logo": "/logo nombre.png"
     },
     "navegacion": [
@@ -68,14 +68,14 @@
             "titulo": "Aplicación de gestión del stock",
             "descripcion": "Estoy desarrollando una aplicación para gestionar el stock de reactivos almacenables en la nevera del laboratorio de Microbiología Clínica del Hospital.",
             "icono": "/icono de base de datos.png",
-            "imagen": "/menu.png"
+            "imagen": "/Menu.png"
         },
         {
             "id": 2,
             "titulo": "Juego de cazar dragones por la calle",
             "descripcion": "Estoy creando un juego de cazar dragones por la calle como el Pokémon Go.",
             "icono": "/icono de base de datos.png",
-            "imagen": "/menu.png"
+            "imagen": "/Menu.png"
         }
     ],
     "contacto": [
@@ -95,11 +95,12 @@
             "id": 3,
             "tipo": "ubicacion",
             "texto": "Calle Espiga nº23, Alcalá de Guadaíra",
-            "icono": "/imagen direccion.png"
+            "icono": "/imagen dirrecion.png"
         },
         {
             "id": 4,
             "tipo": "linkedin",
+            "texto": "www.linkedin.com/in/álvaro-peña-gil-4bab8b239",
             "icono": "/image linkedin.png"
         }
     ]

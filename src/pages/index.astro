@@ -1,8 +1,64 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Titulo from "../components/Titulo.astro";
+import CardFormacion from "../components/CardFormacion.astro";
+import CardExperiencia from "../components/CardExperiencia.astro";
+import CardProyecto from "../components/CardProyecto.astro";
+import Footer from "../components/Footer.astro";
+import cv from "../data/curriculum.json";
 ---
 
-<Layout>
-	
+<Layout titulo={`${cv.persona.nombre} | Currículum`}>
+    <Header logo={cv.persona.logo} nombre={cv.persona.nombre} enlaces={cv.navegacion} />
+
+    <main>
+        <Hero persona={cv.persona} />
+
+        <section aria-labelledby="formacion">
+            <Titulo texto="Formación" id="formacion" />
+            <div class="lista">
+                {cv.formacion.map((item) => <CardFormacion json={item} />)}
+            </div>
+        </section>
+
+        <section aria-labelledby="experiencia">
+            <Titulo texto="Experiencia Laboral" id="experiencia" />
+            <div class="rejilla">
+                {cv.experiencia.map((item) => <CardExperiencia json={item} />)}
+            </div>
+        </section>
+
+        <section aria-labelledby="proyecto">
+            <Titulo texto="Proyecto" id="proyecto" />
+            <div class="lista">
+                {cv.proyectos.map((item) => <CardProyecto json={item} />)}
+            </div>
+        </section>
+    </main>
+
+    <Footer contacto={cv.contacto} />
 </Layout>
+
+<style>
+    .lista,
+    .rejilla {
+        display: grid;
+        gap: 1rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    .rejilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    @media (max-width: 700px) {
+        .rejilla {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>
