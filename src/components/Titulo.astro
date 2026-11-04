@@ -1,0 +1,23 @@
+---
+interface Props {
+    texto: string;
+    id?: string;
+}
+
+const { texto, id } = Astro.props;
+---
+
+<h2 id={id}>{texto}</h2>
+
+<style>
+    h2 {
+        width: fit-content;
+        margin: 4rem auto 1.5rem;
+        padding: 0.3rem 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #ffffff;
+        background: var(--acento);
+        border-radius: 8px;
+    }
+</style>

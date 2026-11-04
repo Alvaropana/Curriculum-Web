@@ -1,23 +1,72 @@
+---
+interface Props {
+	titulo?: string;
+}
+
+const { titulo = "Currículum" } = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Currículum web de Álvaro Peña Gil, desarrollador DAM/DAW." />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{titulo}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
+<style is:global>
+	:root {
+		--fondo: #f2f7a0;
+		--superficie: #ffffff;
+		--texto: #111111;
+		--texto-suave: #3d3d3d;
+		--acento: #2373f4;
+		--acento-pie: #3b86ff;
+		--acento-pildora: #65d0f4;
+		--sombra: 0 2px 6px rgba(0, 0, 0, 0.12);
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
+	}
+
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+		color: var(--texto);
+		background: var(--fondo);
+		line-height: 1.5;
+	}
+
+	:focus-visible {
+		outline: 3px solid var(--texto);
+		outline-offset: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 </style>

@@ -1,46 +1,66 @@
-# Astro Starter Kit: Basics
+# Currículum web: Álvaro Peña Gil
 
-```sh
-npm create astro@latest -- --template basics
-```
+Página web de mi currículum, hecha con [Astro](https://astro.build). Toda la información (datos personales, formación, experiencia, proyectos y contacto) está guardada en un archivo JSON y se pinta con componentes.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Diseño
 
-## 🚀 Project Structure
+Este es mi diseño del Figma: https://www.figma.com/design/TvpghDRBsi6sZ0qHpB1iPX/Mi-curriculum?node-id=0-1&t=MEgmV82mrD59GdHM-1
 
-Inside of your Astro project, you'll see the following folders and files:
+Dentro del proyecto también está el documento Word del diseño: diseño pagina web curriculum
+
+## Estructura del proyecto
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+    ├── foto perfil.jpg
+    ├── foto de base de datos.png
+    ├── image gmail.png
+    ├── image monroy.png
+    ├── image vedruna.png
+    ├── imgane dirrecion.png
+    ├── imagen telefono.png
+    ├── logo nombre.png
+    ├── Menu.png
+│   └── 
+├── src/
+│   ├── components/
+│   │   ├── CardExperiencia.astro
+│   │   ├── CardFormacion.astro
+│   │   ├── CardProyecto.astro
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   ├── Hero.astro
+│   │   └── Titulo.astro
+│   ├── data/
+│   │   └── curriculum.json
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Cómo funciona
 
-## 🧞 Commands
+- `src/data/curriculum.json` guarda todo el contenido del currículum.
+- `src/pages/index.astro` lee el JSON y, con `.map()`, crea una tarjeta por cada estudio, trabajo y proyecto.
+- Cada parte de la página es un componente que recibe sus datos por props.
+- Los colores y la fuente se definen una sola vez en `Layout.astro`, como variables CSS.
 
-All commands are run from the root of the project, from a terminal:
+Para añadir un trabajo, un estudio o un proyecto nuevo basta con añadir un objeto al JSON, sin tocar los componentes.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Comandos
 
-## 👀 Want to learn more?
+Todos los comandos se ejecutan desde la raíz del proyecto, en una terminal:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| Comando           | Acción                                              |
+| :---------------- | :-------------------------------------------------- |
+| `npm install`     | Instala las dependencias                            |
+| `npm run dev`     | Inicia el servidor local en `localhost:4321`        |
+
+## Tecnologías
+
+- Astro
+- HTML y CSS
+- JSON para los datos

@@ -1,0 +1,37 @@
+---
+const { json } = Astro.props;
+---
+
+<article class="tarjeta">
+    <h3>{json.puesto}</h3>
+    <p class="fecha">{json.fecha}</p>
+    <p class="descripcion">{json.descripcion}</p>
+</article>
+
+<style>
+    .tarjeta {
+        min-height: 12rem;
+        padding: 1.25rem 1.5rem;
+        background: var(--superficie);
+        border-radius: 8px;
+    }
+    h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.25;
+    }
+    .fecha {
+        margin: 0 0 1.5rem;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: var(--texto-suave);
+    }
+    .descripcion {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.4;
+        color: var(--texto-suave);
+    }
+</style>

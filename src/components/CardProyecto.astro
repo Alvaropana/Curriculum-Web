@@ -1,0 +1,56 @@
+---
+const { json } = Astro.props;
+---
+
+<article class="tarjeta">
+    <img class="icono" src={json.icono} alt="" />
+    <div class="contenido">
+        <h3>{json.titulo}</h3>
+        <p>{json.descripcion}</p>
+    </div>
+    <img class="captura" src={json.imagen} alt={`Captura de ${json.titulo}`} />
+</article>
+
+<style>
+    .tarjeta {
+        display: grid;
+        grid-template-columns: 110px 1fr 120px;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 1.5rem;
+        background: var(--superficie);
+        border-radius: 8px;
+    }
+    .icono {
+        justify-self: center;
+        width: 80px;
+        height: auto;
+    }
+    .captura {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    h3 {
+        margin: 0 0 0.75rem;
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+    p {
+        margin: 0;
+        max-width: 48ch;
+        color: var(--texto-suave);
+    }
+
+    @media (max-width: 700px) {
+        .tarjeta {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+        }
+        .captura {
+            max-width: 160px;
+        }
+    }
+</style>
