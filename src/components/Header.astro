@@ -10,9 +10,9 @@ const { logo, nombre, enlaces } = Astro.props;
 
 <header class="cabecera">
     <div class="interior">
-        <a href="#sobre-mi" class="logo" aria-label={`${nombre}, inicio`}>
+        <div class="logo">
             <img src={logo} alt="APG" />
-        </a>
+        </div>
         <nav aria-label="Principal">
             <ul>
                 {
