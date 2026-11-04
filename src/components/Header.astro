@@ -1,0 +1,81 @@
+---
+interface Props {
+    logo: string;
+    nombre: string;
+    enlaces: { id: string; texto: string }[];
+}
+
+const { logo, nombre, enlaces } = Astro.props;
+---
+
+<header class="cabecera">
+    <div class="interior">
+        <div class="logo">
+            <img src={logo} alt="APG" />
+        </div>
+        <nav aria-label="Principal">
+            <ul>
+                {
+                    enlaces.map((enlace) => (
+                        <li>
+                            <a href={`#${enlace.id}`} data-texto={enlace.texto}>{enlace.texto}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--superficie);
+    border-bottom: 1px solid var(--texto);
+}
+    .interior {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem 1.5rem;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0.6rem 1.5rem;
+    }
+    .logo img {
+        display: block;
+        height: 2.2rem;
+        width: auto;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem 1.25rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    nav a {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--texto);
+        font-size: 0.95rem;
+        text-decoration: none;
+    }
+    nav a::after {
+        content: attr(data-texto);
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        font-weight: 700;
+        user-select: none;
+        pointer-events: none;
+    }
+    nav a:hover {
+        font-weight: 700;
+    }
+</style>
